@@ -496,3 +496,44 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding: 16px 32px 24px;
   gap: 16px;
 }
+
+// Draw the reaction-coordinate curve through the actual dot positions
+function drawReactionPath() {
+  const svg = document.querySelector('.rc-path');
+  const timeline = document.querySelector('.rc-timeline');
+  if (!svg || !timeline) return;
+
+  const dots = Array.from(timeline.querySelectorAll('.rc-dot'));
+  if (dots.length < 2) return;
+
+  const containerRect = timeline.getBoundingClientRect();
+  const width = containerRect.width;
+  const height = containerRect.height;
+
+  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+  const points = dots.map((dot) => {
+    const r = dot.getBoundingClientRect();
+    return {
+      x: r.left + r.width / 2 - containerRect.left,
+      y: r.top + r.height / 2 - containerRect.top
+    };
+  });
+
+  let d = `M${points[0].x},${points[0].y}`;
+  for (let i = 0; i < points.length - 1; i++) {
+    const p0 = points[i];
+    const p1 = points[i + 1];
+    const midX = (p0.x + p1.x) / 2;
+    d += ` C${midX},${p0.y} ${midX},${p1.y} ${p1.x},${p1.y}`;
+  }
+
+  const path = svg.querySelector('path');
+  if (path) path.setAttribute('d', d);
+}
+
+window.addEventListener('load', drawReactionPath);
+window.addEventListener('resize', () => {
+  clearTimeout(window._rcResizeTimer);
+  window._rcResizeTimer = setTimeout(drawReactionPath, 150);
+});
