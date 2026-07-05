@@ -200,6 +200,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .btn-ghost { border: 1px solid var(--border); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent-teal); color: var(--accent-teal); }
+.btn-primary-alt { background: var(--text); color: #fff; }
+.btn-primary-alt:hover { background: #2a2f38; }
 
 /* ============ About ============ */
 .about-grid {
