@@ -390,16 +390,18 @@ ul { list-style: none; margin: 0; padding: 0; }
 .recognition-grid {
   display: flex;
   flex-direction: column;
-  gap: 48px;
 }
-.memberships {
-  max-width: var(--container);
-  margin: 8px auto 0;
-  padding: 32px 32px 0;
+.recognition-block {
+  padding-top: 40px;
   border-top: 1px solid var(--border);
 }
 
-.memberships h2 { font-size: 22px; margin-bottom: 20px; }
+.recognition-block:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.recognition-block h2 { font-size: 22px; margin-bottom: 20px; }
 
 .awards-more { display: none; }
 .awards-more.expanded { display: block; }
@@ -487,7 +489,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
   .research-grid { grid-template-columns: 1fr 1fr; }
-  .recognition-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
