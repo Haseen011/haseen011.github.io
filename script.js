@@ -34,3 +34,12 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+document.querySelectorAll('.show-more-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = document.querySelector(`.${btn.dataset.target}`);
+    if (!target) return;
+    const isExpanded = target.classList.toggle('expanded');
+    btn.textContent = isExpanded ? 'Show less': 'Show more';
+  });
+});
