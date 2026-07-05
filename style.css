@@ -374,6 +374,17 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .pub-more { margin-top: 24px; }
 .pub-more a { text-decoration: none; color: var(--accent-teal); font-size: 14px; font-weight: 500; }
+.pub-subsection {
+     margin-top: 40px;
+     padding-top: 32px;
+     border-top: 1px solid var(--border);
+   }
+
+   .pub-subtitle {
+     font-size: 18px;
+     font-weight: 600;
+     margin-bottom: 16px;
+   }
 
 /* ============ Recognition ============ */
 .recognition-grid {
