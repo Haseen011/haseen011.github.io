@@ -405,8 +405,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .recognition-block h2 { font-size: 22px; margin-bottom: 20px; }
 
-.awards-more { display: none; }
-.awards-more.expanded { display: block; }
+.awards-more, .pubs-more, .conf-more { display: none; }
+.awards-more.expanded, .pubs-more.expanded, .conf-more.expanded { display: block; }
 
 .show-more-btn {
   margin-top: 8px;
