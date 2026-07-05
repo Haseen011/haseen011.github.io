@@ -393,8 +393,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   gap: 48px;
 }
 .memberships {
-  margin-top: 56px;
-  padding-top: 40px;
+  max-width: var(--container);
+  margin: 56px auto 0;
+  padding: 40px 32px 0;
   border-top: 1px solid var(--border);
 }
 
