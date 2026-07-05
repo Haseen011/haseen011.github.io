@@ -392,6 +392,13 @@ ul { list-style: none; margin: 0; padding: 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
+.memberships {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.memberships h2 { font-size: 22px; margin-bottom: 20px; }
 
 .recognition-grid h2 { font-size: 22px; margin-bottom: 20px; }
 
