@@ -1,4 +1,4 @@
-# Your Academic Website
+# Your Academic Webpage
 
 A single-page site template for showcasing academic/research work: hero, about, research interests, career timeline (styled as a reaction-coordinate diagram), publications with filtering, awards/news/teaching, and contact — built in plain HTML/CSS/JS so it works on GitHub Pages with zero build step.
 
