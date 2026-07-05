@@ -388,8 +388,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* ============ Recognition ============ */
 .recognition-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 48px;
 }
 .memberships {
