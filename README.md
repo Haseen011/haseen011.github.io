@@ -18,7 +18,7 @@ Just open `index.html` in a browser — no build tools needed. Or run a tiny loc
 python3 -m http.server 8000
 ```
 
-then visit `http://localhost:8000`.
+Then visit `http://localhost:8000`.
 
 ## 3. Deploy on GitHub Pages
 
