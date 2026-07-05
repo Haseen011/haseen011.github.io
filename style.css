@@ -212,8 +212,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .about-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   align-content: start;
 }
 
@@ -488,6 +488,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ============ Responsive ============ */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
   .research-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
